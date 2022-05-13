@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "c1bd741a-53d7-4a2f-9e3a-bd1fbe048550",
+		"name": "Green Acesso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listarServicos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/servicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"servicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserirServicos com Data Limite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tituloServico\": \"teste\",\n    \"descricao\": \"teste\",\n    \"dataLimite\":  \"2022-05-31\",\n    \"diasExecucao\": [\"Segunda-Feira\", \"Terça-Feira\"],\n    \"idTipoServico\": 1,\n    \"idUsuario\": 1\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/servicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"servicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletarServico",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/servicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"servicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarServico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/servicos/teste/teste/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"servicos",
+						"teste",
+						"teste",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InserirServicos uma data de execucao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tituloServico\": \"Resolver problemas\",\n    \"descricao\": \"resolver 1 problema depois resolver o segundo problema\",\n    \"dataExecucao\": \"2022-05-14\",\n    \"idTipoServico\": 1,\n    \"idUsuario\": 1\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/servicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"servicos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
